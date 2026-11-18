@@ -1,0 +1,35 @@
+{
+	"FileVersion": 3,
+	"Version": 0,
+	"VersionName": "0.1.0",
+	"SemVersion": "0.1.0",
+	"GameVersion": ">=517554",
+	"FriendlyName": "Tick Profiler",
+	"Description": "Diagnostic logging for low server tick rates: times every stage of the game's frame, which kinds of objects use the time, hitches, network load and host CPU starvation, and writes it to data files and the game log. Measures only; it changes nothing in the game. Works on dedicated servers (Windows and Linux) and in single player; players do not need it.",
+	"Category": "Modding",
+	"CreatedBy": "Zambie223",
+	"CreatedByURL": "https://github.com/Zambie223",
+	"DocsURL": "https://github.com/Zambie223/TickProfiler",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/Zambie223/TickProfiler/issues",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"RequiredOnRemote": false,
+	"RemoteVersionRange": "*",
+	"Modules": [
+		{
+			"Name": "TickProfiler",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "SML",
+			"Enabled": true,
+			"SemVersion": "^3.12.0"
+		}
+	]
+}

@@ -2,7 +2,7 @@
 
 A diagnostic mod for Satisfactory that records, in detail, where a server's (or game's) frame time goes, so a low tick rate can be traced to its cause before anything is changed. It only measures: it changes nothing in the game and adds no network traffic of its own (apart from the chat replies to `/perf`).
 
-**Status: early release (0.1.0).** Tested on game version 1.2.5.0 (build 517554) with SML 3.12: Windows and Linux dedicated servers, players joining with and without the mod, and single player. Game update 1.2.5.1 (build 520140) is not tested yet, and needs an SML release that supports it.
+**Status: early release (0.1.1).** Version 0.1.1 is tested on game version 1.2.5.1 (build 520140) with SML 3.12.1, on Windows and Linux dedicated servers with a player joined who also had the mod. Version 0.1.0 was tested on game version 1.2.5.0 (build 517554) with SML 3.12.0, on Windows and Linux dedicated servers, with players joining with and without the mod, and in single player.
 
 ## Why a mod
 
@@ -57,7 +57,7 @@ Classes are tagged with their origin (`FactoryGame`/`Engine` native code, `Game`
 
 ## Installation
 
-Tick Profiler is not on the Satisfactory Mod Repository (so not in Satisfactory Mod Manager); install it by hand from the [releases page](https://github.com/Zambie223/TickProfiler/releases). It needs SML 3.12 or newer installed.
+Tick Profiler is not on the Satisfactory Mod Repository (so not in Satisfactory Mod Manager); install it by hand from the [releases page](https://github.com/Zambie223/TickProfiler/releases). Version 0.1.1 needs game version 1.2.5.1 or newer and SML 3.12.1 or newer. For game 1.2.5.0 with SML 3.12.0, use version 0.1.0.
 
 | Where it runs | Download | Extract into |
 |---|---|---|
@@ -87,7 +87,7 @@ You don't need to edit any file to change a setting. Use whichever of these suit
 | Setting | Default | Meaning |
 |---|---|---|
 | `Level` | 2 | 0 paused, 1 basic, 2 detailed, 3 extreme |
-| `HitchMs` | 0 | frames slower than this (ms) are hitches; 0 = automatic (2x the target frame time, at least 50 ms) |
+| `HitchMs` | 0 | frames slower than this (ms) are hitches; 0 = automatic: 2x the target frame time (at least 50 ms), or 2x the previous second's average frame work if that is higher, so a server that is slow on every frame isn't reported as a hitch on every frame |
 | `SummaryIntervalSec` | 60 | seconds between summaries in FactoryGame.log |
 | `ClassIntervalSec` | 10 | seconds per set of rows in classes.csv |
 | `SnapshotIntervalSec` | 300 | seconds between object counts |

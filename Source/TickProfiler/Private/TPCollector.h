@@ -15,7 +15,7 @@ namespace TickProfiler
 	{
 		/** 0 paused, 1 basic, 2 detailed (default), 3 extreme. */
 		int32 Level = 2;
-		/** Frames whose work exceeds this are hitches. 0 = automatic (2x the server's target frame time, at least HitchMinMs). */
+		/** Frames whose work exceeds this are hitches. 0 = automatic: 2x the server's target frame time, at least HitchMinMs, or 2x the previous second's average work if higher (see GetHitchThresholdMs). */
 		double HitchMs = 0.0;
 		double HitchMinMs = 50.0;
 		double SummaryIntervalSec = 60.0;

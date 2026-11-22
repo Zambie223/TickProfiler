@@ -11,7 +11,7 @@ namespace TickProfiler
 			{TEXT("Level"), TEXT("TickProfilerLevel"), ESettingKind::Int, 0, 3, false,
 				TEXT("0 paused, 1 basic (frame stages), 2 detailed (+ which kinds of objects, default), 3 extreme (+ single objects; short captures)")},
 			{TEXT("HitchMs"), TEXT("TickProfilerHitchMs"), ESettingKind::Float, 0, 60000, false,
-				TEXT("frames slower than this many ms are hitches; 0 = automatic (2x the target frame time, at least 50 ms)")},
+				TEXT("frames slower than this many ms are hitches; 0 = automatic (2x the target frame time, at least 50 ms, or 2x the previous second's average if higher)")},
 			{TEXT("SummaryIntervalSec"), TEXT("TickProfilerSummarySec"), ESettingKind::Int, 5, 3600, false,
 				TEXT("seconds between summaries in FactoryGame.log")},
 			{TEXT("ClassIntervalSec"), TEXT("TickProfilerClassSec"), ESettingKind::Int, 1, 600, false,

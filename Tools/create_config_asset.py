@@ -26,7 +26,7 @@ SETTINGS = [
      "0 paused, 1 basic (frame stages), 2 detailed (+ which kinds of objects use the time),\n"
      "3 extreme (+ single objects; meant for short captures, e.g. /perf level 3 10)."),
     ("HitchMs", "float", 0.0, "Hitch threshold (ms, 0 = automatic)",
-     "Frames that take longer than this are logged as hitches.\n0 = automatic: twice the target frame time, at least 50 ms."),
+     "Frames that take longer than this are logged as hitches.\n0 = automatic: twice the target frame time, at least 50 ms,\nor twice the previous second's average frame time if that is higher."),
     ("SummaryIntervalSec", "int", 60, "Log summary every (seconds, 5-3600)",
      "How often a summary goes into FactoryGame.log."),
     ("ClassIntervalSec", "int", 10, "Class table every (seconds, 1-600)",

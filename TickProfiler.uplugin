@@ -1,9 +1,9 @@
 {
 	"FileVersion": 3,
 	"Version": 0,
-	"VersionName": "0.1.0",
-	"SemVersion": "0.1.0",
-	"GameVersion": ">=517554",
+	"VersionName": "0.1.1",
+	"SemVersion": "0.1.1",
+	"GameVersion": ">=520140",
 	"FriendlyName": "Tick Profiler",
 	"Description": "Diagnostic logging for low server tick rates: times every stage of the game's frame, which kinds of objects use the time, hitches, network load and host CPU starvation, and writes it to data files and the game log. Measures only; it changes nothing in the game. Works on dedicated servers (Windows and Linux) and in single player; players do not need it.",
 	"Category": "Modding",
@@ -29,7 +29,7 @@
 		{
 			"Name": "SML",
 			"Enabled": true,
-			"SemVersion": "^3.12.0"
+			"SemVersion": "^3.12.1"
 		}
 	]
 }
